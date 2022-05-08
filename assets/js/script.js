@@ -276,3 +276,11 @@ function showHideGameOverlay(show) {
         overlayElement.classList.add("hide-overlay");
     }
 }
+/**
+ * Listens for a click to start the game
+ */
+gameControllerElement.addEventListener("click", function onClick(event) {
+    if (!gameInProgress) {
+        startGame();
+    }
+});
