@@ -287,3 +287,50 @@ footer a {
     text-decoration: none;
     color: #442ec0;
 }
+
+
+/*Responsive design section*/
+
+@media (min-width: 2000px) {
+    .game-info,
+    .game-stats,
+    #instructions h3 {
+        font-size: 1.7rem;
+    }
+    #btn {
+        height: 30px;
+        width: 60px;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #start-game-container {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        line-height: 1rem;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 470px) {
+    .game-info,
+    .game-stats,
+    footer p {
+        font-size: 0.7em;
+    }
+    #btn {
+        height: 14px;
+        width: 30px;
+        font-size: 0.55rem;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    #start-game-container {
+        font-size: 0.8rem;
+    }
+}
