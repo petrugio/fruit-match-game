@@ -170,3 +170,12 @@ https://webdeasy.de/en/top-css-buttons-en/*/
         opacity: 0;
     }
 }
+
+
+/*Header section*/
+
+h1 {
+    color: #442ec0;
+    text-align: center;
+    padding: 10px;
+}
