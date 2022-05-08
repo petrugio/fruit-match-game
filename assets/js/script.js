@@ -153,3 +153,19 @@ function calculateFinishedGameScore() {
     }
     return score;
 }
+/**
+ * Calculates game score and updates game history
+ */
+function updateGameScoreStats() {
+    gameOverlayElement.visible = true;
+    const lastScore = calculateFinishedGameScore();
+    lastScoreElements.forEach((scoreElement) => {
+        scoreElement.innerText = lastScore;
+    });
+
+    updateScoresHistory();
+    const bestScore = calculateBestScore();
+    bestScoreElements.forEach((scoreElement) => {
+        scoreElement.innerText = bestScore;
+    });
+}
