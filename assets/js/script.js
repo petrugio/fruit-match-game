@@ -1,5 +1,5 @@
 /**
- * Assign variables
+ * Declare variables
  */
 const cards = document.querySelectorAll(".memory-card");
 const totalNumberOfCards = cards.length;
@@ -23,3 +23,18 @@ var gameInProgress = false;
 var gameTimerInterval = null;
 var solvedCardsCount = 0;
 let scores = [];
+
+/*code for timer countdown, flips and ovelay start button inpired from:
+https://www.youtube.com/watch?v=ZniVgo8U7ek*/
+/**
+ * Starts the countdown timer
+ */
+function startGameTimer() {
+    gameTimerInterval = setInterval(() => {
+        timeRemaining--;
+        timeElement.innerText = timeRemaining.toString();
+        if (timeRemaining <= 0) {
+            finishGame();
+        }
+    }, 1000);
+}
