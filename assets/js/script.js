@@ -188,3 +188,14 @@ function calculateBestScore() {
         .reverse();
     return bestScore;
 }
+/**
+ * Starts the game
+ */
+function startGame() {
+    timeRemaining = gameLengthInSeconds;
+    shuffle();
+    lockBoard = false;
+    startGameTimer();
+    gameInProgress = true;
+    showHideGameOverlay(false);
+}
