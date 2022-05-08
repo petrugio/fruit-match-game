@@ -255,3 +255,22 @@ function resetDisabledCards() {
 }
 //card click listener
 cards.forEach((card) => card.addEventListener("click", flipCard));
+/**
+ * Show or hides game overlay, depending on the parameter
+ */
+function showHideGameOverlay(show) {
+    if (show) {
+        overlayElement.classList.remove("hide-overlay");
+        overlayElement.classList.add("show-overlay");
+        const statsContainer = document.getElementById("game-stats-container");
+        if (scores.length > 0) {
+            document.getElementById("instructions").style.display = "none";
+            statsContainer.style.display = "";
+        } else {
+            statsContainer.style.display = "none";
+        }
+    } else {
+        overlayElement.classList.remove("show-overlay");
+        overlayElement.classList.add("hide-overlay");
+    }
+}
