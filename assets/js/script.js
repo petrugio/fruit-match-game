@@ -224,3 +224,10 @@ function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
+/**
+ * Resets game time
+ */
+function resetTime() {
+    timeRemaining = gameLengthInSeconds;
+    timeElement.innerText = timeRemaining;
+}
