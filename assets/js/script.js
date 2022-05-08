@@ -38,7 +38,6 @@ function startGameTimer() {
         }
     }, 1000);
 }
-
 /**
  * Play audio
  */
@@ -48,7 +47,6 @@ function playMusic() {
     btn.classList.add("on");
     btn.value = " ON ";
 }
-
 /**
  * Stop audio
  */
@@ -58,4 +56,80 @@ function stopMusic() {
     btn.classList.remove("on");
     btn.classList.add("off");
     btn.value = "OFF";
+}
+/*code for card flip adapted from:
+https://www.youtube.com/watch?v=ZniVgo8U7ek*/
+/**
+ * Flips the card
+ */
+function flipCard() {
+    if (lockBoard) return;
+    if (this.classList.contains("disabled")) return;
+
+    if (this === firstCard) return;
+
+    this.classList.add("flip");
+
+    updateFlipsCount();
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+
+        return;
+    }
+
+    secondCard = this;
+    checkForMatch();
+}
+/**
+ * Updates the number of flips after every card flip
+ */
+function updateFlipsCount() {
+    cardFlips++;
+    flipsElement.innerText = cardFlips.toString();
+}
+/**
+ * Checks for a card match and disable matched cards.
+ * If all cards are matched - it's game over!
+ */
+function checkForMatch() {
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disableCards();
+        solvedCardsCount += 2;
+        if (solvedCardsCount >= totalNumberOfCards) {
+            finishGame();
+        }
+    } else {
+        unFlipCards();
+    }
+}
+/**
+ * Disable cards when matched
+ */
+function disableCards() {
+    firstCard.classList.add("disabled");
+    secondCard.classList.add("disabled");
+
+    resetBoard();
+}
+/**
+ * Un-flips the selected pair of cards
+ */
+function unFlipCards() {
+    lockBoard = true;
+
+    setTimeout(() => {
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+
+        resetBoard();
+    }, 1500);
+}
+/**
+ * Un-flips all cards when game is finished
+ */
+function unFlipAllCards() {
+    cards.forEach((card) => {
+        card.classList.remove("flip");
+    });
 }
