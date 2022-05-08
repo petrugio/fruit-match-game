@@ -217,3 +217,10 @@ function finishGame() {
     stopMusic();
     gameControllerElement.innerText = "Start Game";
 }
+/**
+ * Resets board function
+ */
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
