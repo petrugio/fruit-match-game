@@ -231,3 +231,10 @@ function resetTime() {
     timeRemaining = gameLengthInSeconds;
     timeElement.innerText = timeRemaining;
 }
+/**
+ * Resets number of flips
+ */
+function resetFlips() {
+    cardFlips = 0;
+    flipsElement.innerText = cardFlips;
+}
