@@ -274,3 +274,16 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek*/
 .front-face {
     transform: rotateY(180deg);
 }
+
+
+/*Footer section*/
+
+footer {
+    text-align: center;
+    color: #442ec0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #442ec0;
+}
