@@ -199,3 +199,21 @@ function startGame() {
     gameInProgress = true;
     showHideGameOverlay(false);
 }
+/**
+ * Ends the game
+ */
+function finishGame() {
+    clearInterval(gameTimerInterval);
+    gameInProgress = false;
+    updateGameScoreStats();
+    showHideGameOverlay(true);
+    resetBoard();
+    solvedCardsCount = 0;
+    lockBoard = true;
+    resetTime();
+    resetFlips();
+    unFlipAllCards();
+    resetDisabledCards();
+    stopMusic();
+    gameControllerElement.innerText = "Start Game";
+}
