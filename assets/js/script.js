@@ -133,3 +133,23 @@ function unFlipAllCards() {
         card.classList.remove("flip");
     });
 }
+/**
+ * Calculates current game score
+ */
+function calculateFinishedGameScore() {
+    let score = 0;
+
+    //for each card solved - 2 pts
+    score += solvedCardsCount * 2;
+
+    const allCardsSolved = solvedCardsCount === totalNumberOfCards;
+
+    if (allCardsSolved) {
+        //if all cards solved - +50 pts
+        score += 50;
+
+        //for each extra second remaining(only if all cards solved) - 5 pts
+        score += timeRemaining * 5;
+    }
+    return score;
+}
