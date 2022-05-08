@@ -255,8 +255,6 @@ function resetDisabledCards() {
     const disabledCards = document.querySelectorAll(".disabled");
     disabledCards.forEach((card) => card.classList.remove("disabled"));
 }
-//card click listener
-cards.forEach((card) => card.addEventListener("click", flipCard));
 /**
  * Show or hides game overlay, depending on the parameter
  */
@@ -276,6 +274,10 @@ function showHideGameOverlay(show) {
         overlayElement.classList.add("hide-overlay");
     }
 }
+/**
+ * Listens for a click to flip the card
+ */
+cards.forEach((card) => card.addEventListener("click", flipCard));
 /**
  * Listens for a click to start the game
  */
