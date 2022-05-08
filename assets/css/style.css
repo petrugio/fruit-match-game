@@ -28,3 +28,56 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 2fr 0.1fr;
 }
+
+
+/*Overlay section*/
+
+.hide-overlay {
+    display: none;
+}
+
+.show-overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+#start-game-container {
+    background-color: rgb(153, 215, 75, 0.9);
+    height: 28rem;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 1rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+#instructions h3 {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    color: #442ec0;
+}
+
+#instructions p {
+    color: #442ec0;
+}
+
+.game-stats-overlay {
+    color: #442ec0;
+    font-size: 1rem;
+    font-weight: 600;
+}
