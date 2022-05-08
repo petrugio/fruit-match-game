@@ -23,6 +23,8 @@ var gameInProgress = false;
 var gameTimerInterval = null;
 var solvedCardsCount = 0;
 let scores = [];
+//by default, showing the initial game overlay
+showHideGameOverlay(true);
 
 /*code for timer countdown, flips and ovelay start button inpired from:
 https://www.youtube.com/watch?v=ZniVgo8U7ek*/
