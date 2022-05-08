@@ -179,3 +179,26 @@ h1 {
     text-align: center;
     padding: 10px;
 }
+
+
+/*Timer, flips, music control and score stats section*/
+
+.game-info-container,
+.game-stats-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+#time-remaining {
+    width: 30px;
+}
+
+.game-info,
+.game-stats {
+    padding: 0 30px;
+    color: #442ec0;
+    font-weight: 600;
+    display: flex;
+}
