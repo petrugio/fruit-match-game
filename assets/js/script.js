@@ -238,3 +238,11 @@ function resetFlips() {
     cardFlips = 0;
     flipsElement.innerText = cardFlips;
 }
+/**
+ * Shuffles the cards
+ */
+function shuffle() {
+    cards.forEach((card) => {
+        card.style.order = Math.floor(Math.random() * 36).toString();
+    });
+}
