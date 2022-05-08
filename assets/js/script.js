@@ -253,3 +253,5 @@ function resetDisabledCards() {
     const disabledCards = document.querySelectorAll(".disabled");
     disabledCards.forEach((card) => card.classList.remove("disabled"));
 }
+//card click listener
+cards.forEach((card) => card.addEventListener("click", flipCard));
