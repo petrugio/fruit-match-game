@@ -246,3 +246,10 @@ function shuffle() {
         card.style.order = Math.floor(Math.random() * 36).toString();
     });
 }
+/**
+ * Resets disabled cards
+ */
+function resetDisabledCards() {
+    const disabledCards = document.querySelectorAll(".disabled");
+    disabledCards.forEach((card) => card.classList.remove("disabled"));
+}
