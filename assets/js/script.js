@@ -284,3 +284,13 @@ gameControllerElement.addEventListener("click", function onClick(event) {
         startGame();
     }
 });
+/**
+ * Listens for a click to toggle music on and off
+ */
+btn.addEventListener("click", function onClick(event) {
+    if (btn.value === "OFF") {
+        playMusic();
+    } else {
+        stopMusic();
+    }
+});
