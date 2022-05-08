@@ -169,3 +169,22 @@ function updateGameScoreStats() {
         scoreElement.innerText = bestScore;
     });
 }
+/**
+ * Updates game score history
+ */
+function updateScoresHistory() {
+    scores.push(calculateFinishedGameScore());
+}
+/**
+ * Calculates best game score
+ */
+function calculateBestScore() {
+    const [bestScore] = scores
+        .sort(function(a, b) {
+            if (a > b) return 1;
+            if (a < b) return -1;
+            return 0;
+        })
+        .reverse();
+    return bestScore;
+}
