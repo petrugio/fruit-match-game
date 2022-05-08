@@ -38,3 +38,24 @@ function startGameTimer() {
         }
     }, 1000);
 }
+
+/**
+ * Play audio
+ */
+function playMusic() {
+    audioElement.play();
+    btn.classList.remove("off");
+    btn.classList.add("on");
+    btn.value = " ON ";
+}
+
+/**
+ * Stop audio
+ */
+function stopMusic() {
+    audioElement.pause();
+    audioElement.currentTime = 0.0;
+    btn.classList.remove("on");
+    btn.classList.add("off");
+    btn.value = "OFF";
+}
