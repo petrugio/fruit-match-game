@@ -275,7 +275,7 @@ function showHideGameOverlay(show) {
     }
 }
 /**
- * Listens for a click to flip the card
+ * Listens for a click to call the flipCard function
  */
 cards.forEach((card) => card.addEventListener("click", flipCard));
 /**

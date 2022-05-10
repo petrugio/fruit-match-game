@@ -23,6 +23,7 @@ View the live project
         * [CSS3](#css3)
         * [Lighthouse](#lighthouse)
         * [WebAIM](#webaim)
+    * [Functional Testing ](#functional-testing)
     * [Browser Testing](#browser-testing)
 * [Bugs](#bugs)
     * [Fixed Bugs](#fixed-bugs)
@@ -335,7 +336,29 @@ All the pages were tested with [Chrome Developer Tools](https://developer.chrome
 
 </details>
 
-
+## Functional Testing 
+ - Upon opening the site link incorrectly: 404 Page should load automatically - Tested, the 404 Page loads up.
+ - Upon opening the site link correctly: Homepage (start screen) should open - Tested, the site loads up. 
+ - Game screen should be inactive - Tested works as intended.
+ - From Homepage when pressing "Start game": 
+   - Overlay (modal) screen should disappear and game screen should become active - Tested works as intended.
+   - Countdown timer should start at 360(sec) and when the time runs out the game should end - Tested works as intended.
+   - Flips counter should be 0 and should increase incrementally on every card click - Tested works as intended.
+   - Music button should be off and when being pressed to toggle the music, button text and color on/off - Tested works as intended.
+   - When first card is being clicked it should flip and stay flipped -Tested works as intended.
+   - When second card is being clicked it should flip and:
+      - If the cards match: should stay flipped - Tested works as intended. 
+      - If the cards do not match: both cards should unflip - Tested works as intended. 
+   - Upon solving all cards or countdown timer getting to 0:
+      - All cards should unflip - Tested works as intended.
+      - Overlay (modal) screen should appear and game screen should become inactive - Tested works as intended.
+      - "Start game" button should be displayed on the overlay (modal) screen - Tested works as intended.
+      - If "Start game" button is pressed the game should start again - Tested works as intended.
+      - "Last score" should display last game score - Tested works as intended.
+      - "Best score" should display best score if more than one game played: - Tested works as intended.
+        - If only one game played "Best score" should be the same as "Last score" - Tested works as intended.
+        - If browser tab is refreshed all scores should reset to 0: - Tested works as intended.
+   
 ## Browser Testing 
 - Page behaves as expected in all browsers tested. The website was tested in [Chrome](https://www.google.com/intl/en_ie/chrome/), [Firefox](https://www.mozilla.org/en-US/firefox/new/),
 [Brave Browser](https://brave.com/),
